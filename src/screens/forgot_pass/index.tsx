@@ -13,11 +13,20 @@ import { ButtonWhite } from "../../components/ButtonWhite";
 import { useNavigation } from "@react-navigation/native";
 import { Input } from "../../components/Input";
 import { Toggle } from "../../components/Toggle";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AppBar } from "../../components/AppBar";
+import BottomSheet from "@gorhom/bottom-sheet/lib/typescript/components/bottomSheet/BottomSheet";
+import { BottomSheetModal } from "../../components/BottomSheetModal";
+import EmailConfirmed from "../../assets/Email_Confirmado.png";
 
 export function ForgotPass() {
     const navigation = useNavigation<any>();
+    const bottomSheetRef = useRef<BottomSheet>(null);
+
+    const handleSubmit = () => {
+        alert("Olá");
+        bottomSheetRef.current?.expand();
+    }
 
     return (
         <View style={styles.container}>
@@ -40,9 +49,17 @@ export function ForgotPass() {
 
                 <View style={styles.spacing} />
 
-                <Button title="Recuperar senha" />
+                <Button title="Recuperar senha" onPress={handleSubmit}/>
 
             </View>
+            <BottomSheetModal
+                 buttonLabel=""
+                 image={EmailConfirmed}
+                 message=""
+                 title=""
+                 onButtonPressed={console.log}
+                 children={null}
+            ></BottomSheetModal>
         </View>
     );
 }

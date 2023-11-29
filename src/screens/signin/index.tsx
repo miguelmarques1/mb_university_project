@@ -18,17 +18,22 @@ import { AppBar } from "../../components/AppBar";
 
 export function SignIn() {
   const [ rememberMe, setRemeberMe ] = useState(false);
+  const [ email, setEmail ] = useState("");
+  const [ pass, setPass ] = useState("");
+
   const navigation = useNavigation<any>();
 
   const handleSetRemeberMe = () => setRemeberMe(!rememberMe);
 
-  const handleNavigateHome = () => {
-    navigation.navigate("Home");
-  };
-
   const handleNavigateForgotPass = () => {
     navigation.navigate("ForgotPass");
   }
+
+  const handleLogin = () => {
+
+  }
+
+  
 
   return (
     <View style={styles.container}>
@@ -44,6 +49,8 @@ export function SignIn() {
           label="E-mail"
           placeholder="Insira seu e-mail"
           keyboardType="email-address"
+          value={email}
+          onChangeText={setEmail}
           maxLength={20}
         />
         
@@ -52,6 +59,8 @@ export function SignIn() {
           placeholder="Insira senha (apenas numeros)"
           keyboardType="number-pad"
           maxLength={6}
+          value={pass}
+          onChangeText={setPass}
           secureTextEntry={true}
         />
 
