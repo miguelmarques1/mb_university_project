@@ -71,7 +71,7 @@ export function SignIn() {
       </View>
 
       <View style={styles.controlsbutons}>
-        <Button title="Fazer login" />
+        <Button title="Fazer login" onPress={handleLogin} />
       </View>
       <Image source={linha} style={styles.linha} />
       <View style={styles.socialControls}>

@@ -26,8 +26,8 @@ export const styles = StyleSheet.create({
   controlsbutons: {
     marginTop: 30,
     marginBottom: 20,
-    width: '100%',
-    paddingHorizontal: 35
+    width: '80%',
+    alignItems: 'center'
   },
   controls: {
     marginTop: 0,

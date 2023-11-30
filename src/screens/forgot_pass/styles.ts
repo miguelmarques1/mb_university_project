@@ -14,6 +14,9 @@ export const styles = StyleSheet.create({
         width: '100%',
         paddingHorizontal: 35
     },
+    control: {
+        alignItems: 'center'
+    },
     title: {
         color: theme.colors.text,
         textAlign: 'left',

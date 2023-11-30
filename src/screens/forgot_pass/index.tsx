@@ -20,12 +20,21 @@ import { BottomSheetModal } from "../../components/BottomSheetModal";
 import EmailConfirmed from "../../assets/Email_Confirmado.png";
 
 export function ForgotPass() {
+    const [ isModalVisible, setModalVisibility ] = useState(false);
     const navigation = useNavigation<any>();
     const bottomSheetRef = useRef<BottomSheet>(null);
 
     const handleSubmit = () => {
-        alert("Olá");
-        bottomSheetRef.current?.expand();
+        setModalVisibility(true);
+    }
+
+    const handleEnter = () => {
+        setModalVisibility(true);
+        navigation.goBack();
+    }
+
+    const handleCloseModal = () => {
+        setModalVisibility(false);
     }
 
     return (
@@ -49,16 +58,19 @@ export function ForgotPass() {
 
                 <View style={styles.spacing} />
 
-                <Button title="Recuperar senha" onPress={handleSubmit}/>
+                <View style={styles.control}>
+                    <Button title="Recuperar senha" onPress={handleSubmit}/>
+                </View>
 
             </View>
             <BottomSheetModal
-                 buttonLabel=""
+                 buttonLabel={isModalVisible ? "Entrar" : "Sair"}
                  image={EmailConfirmed}
-                 message=""
-                 title=""
-                 onButtonPressed={console.log}
+                 message="Enviamos as instruções em seu e-mail para restaurar a sua senha"
+                 title="Confira seu e-mail"
+                 onButtonPressed={handleEnter}
                  children={null}
+                 index={isModalVisible ? 1 : 0}
             ></BottomSheetModal>
         </View>
     );
