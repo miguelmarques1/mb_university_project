@@ -4,6 +4,7 @@ import { Start } from '../screens/start';
 import { Home } from '../screens/home';
 import { SignIn } from '../screens/signin';
 import { ForgotPass } from '../screens/forgot_pass';
+import { Register } from '../screens/register';
 // import { App4 } from '../screens/reset';
 
 const Stack = createStackNavigator();
@@ -15,6 +16,7 @@ export function AppRoutes() {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="ForgotPass" component={ForgotPass} />
+      <Stack.Screen name="Register" component={Register} />
       {/* <Stack.Screen name="Reset" component={App4} /> */}
       
     </Stack.Navigator>

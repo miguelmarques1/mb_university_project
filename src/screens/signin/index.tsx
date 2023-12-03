@@ -33,7 +33,9 @@ export function SignIn() {
 
   }
 
-  
+  const handleNavigateRegister = () => {
+    navigation.navigate("Register");
+  }
 
   return (
     <View style={styles.container}>
@@ -78,6 +80,10 @@ export function SignIn() {
         <Image source={google} style={styles.linha} />
         <Image source={facebook} style={styles.linha} />
         <Image source={apple} style={styles.linha} />
+      </View>
+      <View style={styles.register}>
+        <Text>Novo usuário? </Text>
+        <Text style={styles.createAccountText} onPress={handleNavigateRegister}>Crie uma conta</Text>
       </View>
     </View>
   );

@@ -65,6 +65,11 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: theme.fonts.title500,
     lineHeight: 25
+  },
+  register: {
+    flexDirection: 'row'
+  },
+  createAccountText: {
+    color: theme.colors.purple,
   }
-
 });
