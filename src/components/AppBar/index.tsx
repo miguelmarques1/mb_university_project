@@ -7,7 +7,11 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { BackButton } from "../BackButton";
 import { useNavigation } from "@react-navigation/native";
 
-export function AppBar(props: any) {
+type Props = {
+    onPressBack?: () => void
+}
+
+export function AppBar({onPressBack}: Props) {
     const navigation = useNavigation();
 
     const handleNavigateBack = () => {
@@ -16,7 +20,7 @@ export function AppBar(props: any) {
 
     return (
         <View style={styles.container}>
-            <BackButton onPress={handleNavigateBack} />
+            <BackButton onPress={onPressBack ?? handleNavigateBack} />
             <Image source={logoSmall} resizeMode="stretch" />
             <Text></Text>
         </View>

@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
     container: {
         width: "100%",
         height: "100%",
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingBottom: 20,
     },
     inactive: {
         height: 10,
@@ -17,14 +18,16 @@ export const styles = StyleSheet.create({
         height: 10,
         width: 10,
         borderRadius: 5,
-        backgroundColor: 'black',
+        backgroundColor: theme.colors.purple,
     },
     dots: {
         flexDirection: 'row',
-        width: '40%',
+        width: '30%',
         justifyContent: 'space-evenly'
     },
     page: {
-        flex: 1
+        flex: 1,
+        paddingHorizontal: 25,
+        width: "100%"
     }
 });

@@ -11,10 +11,11 @@ export const styles = StyleSheet.create({
         paddingBottom: 10
     },
     content: {
-        paddingTop: 20,
-        flex: 2
+        flex: 2,
+        width: "100%"
     },
     control: {
-        width: "80%"
+        width: "80%",
+        lineHeight: 5,
     }
 });

@@ -13,7 +13,6 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 5,
         fontFamily: theme.fonts.title700,
-        lineHeight: 48
     },
     form:{
         paddingTop: 30,

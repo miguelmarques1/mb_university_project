@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   controlsbutons: {
-    marginTop: 30,
+    marginTop: 60,
     marginBottom: 20,
     width: '80%',
     alignItems: 'center'
@@ -57,8 +57,8 @@ export const styles = StyleSheet.create({
     marginBottom: 15
   },
   linha: {
-    marginTop: 15,
-    marginBottom: 15
+    marginTop: 5,
+    marginBottom: 5
   },
   subtitle: {
     color: theme.colors.purple,
@@ -67,7 +67,10 @@ export const styles = StyleSheet.create({
     lineHeight: 25
   },
   register: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    flex: 1,
+    alignItems: "flex-end",
+    paddingBottom: 20
   },
   createAccountText: {
     color: theme.colors.purple,

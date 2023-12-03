@@ -11,13 +11,17 @@ export const styles = StyleSheet.create({
         textAlign: 'left',
         fontSize: 25,
         fontWeight: 'bold',
-        marginBottom: 5,
         fontFamily: theme.fonts.title700,
-        lineHeight: 48
     },
     form:{
-        paddingTop: 30,
-        justifyContent: 'space-evenly',
+        paddingTop: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: "100%",
         height: "85%"
+    },
+    label: {
+        color: theme.colors.primary,
+        paddingTop: 10
     }
 });

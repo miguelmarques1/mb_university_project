@@ -11,12 +11,10 @@ export const styles = StyleSheet.create({
         textAlign: 'left',
         fontSize: 25,
         fontWeight: 'bold',
-        marginBottom: 5,
         fontFamily: theme.fonts.title700,
-        lineHeight: 48
     },
     form:{
-        paddingTop: 30,
+        paddingTop: 10,
         justifyContent: 'space-evenly',
         height: "85%"
     }

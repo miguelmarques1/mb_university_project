@@ -15,9 +15,9 @@ export const styles = StyleSheet.create({
       },
       label: {
         color: theme.colors.primary,
-        fontFamily: theme.fonts.text500,
-        fontSize: 15,
+        fontFamily: theme.fonts.title500,
+        fontSize: 16,
         textAlign: 'left',
-        fontWeight: 'bold'
+        fontWeight: '900'
       }
 });

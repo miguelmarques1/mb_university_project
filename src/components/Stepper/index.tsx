@@ -1,10 +1,7 @@
 import React from "react"
-import { View } from "react-native";
+import { View, Text, KeyboardAvoidingView } from "react-native";
 import { styles } from "./style";
-import Box from '@mui/material/Box';
-import { Stepper as MuiStepper } from "@mui/material";
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
+import PagerView from "react-native-pager-view";
 
 type Props = {
     activeStep: number,
@@ -16,20 +13,22 @@ type Props = {
 export function Stepper({activeStep, components, onFinish, onBack}: Props) {
     const dots = [];
     
-    for(let i = 0; i < components.length; i++) {
+    for(let index = 0; index < components.length; index++) {
         dots.push(
-            <View style={i == activeStep ? styles.active : styles.inactive}></View>
+            <View key={index} style={index == activeStep ? styles.active : styles.inactive}></View>
         );
     }
 
     return(
-        <View style={styles.container}>
-            <View style={styles.dots}>
-                {dots}
+         <KeyboardAvoidingView keyboardVerticalOffset={0}>
+            <View style={styles.container}>
+                <View style={styles.page} >
+                    {components[activeStep]}
+                </View>
+                <View style={styles.dots}>
+                    {dots}
+                </View>
             </View>
-            <View style={styles.page}>
-                {components[activeStep]}
-            </View>
-        </View>
+         </KeyboardAvoidingView>
     );
 }

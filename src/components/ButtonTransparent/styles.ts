@@ -3,16 +3,19 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
+    marginBottom: 10,
     width: '100%',
     height: 45,
-    backgroundColor: theme.colors.secondary100,
+    backgroundColor: 'transparet',
+    borderWidth: 1,
+    borderColor: theme.colors.primary,
     borderRadius: 25,
     flexDirection: 'row',
     alignItems: 'center'
   },
   title: {
     flex: 1,
-    color: 'white',
+    color: theme.colors.grey,
     fontFamily: theme.fonts.text500,
     fontWeight: 'bold',
     fontSize: 15,
