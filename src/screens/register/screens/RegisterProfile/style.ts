@@ -17,6 +17,6 @@ export const styles = StyleSheet.create({
     form:{
         paddingTop: 30,
         justifyContent: 'space-evenly',
-        height: "85%"
+        flex: 1
     }
 });

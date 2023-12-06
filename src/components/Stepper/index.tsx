@@ -1,7 +1,6 @@
 import React from "react"
 import { View, Text, KeyboardAvoidingView } from "react-native";
 import { styles } from "./style";
-import PagerView from "react-native-pager-view";
 
 type Props = {
     activeStep: number,

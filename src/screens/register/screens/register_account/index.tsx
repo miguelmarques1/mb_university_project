@@ -1,11 +1,11 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, ScrollView } from "react-native";
 import { styles } from "./style";
 import { Input } from "../../../../components/Input";
 
 export function RegisterAccount() {
     return(
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style={styles.title}>Insira os dados da sua conta</Text>
             <View style={styles.form}>
                 <Input label="Email *" placeholder="Insira o seu e-mail" />
@@ -13,6 +13,6 @@ export function RegisterAccount() {
                 <Input label="Senha *" placeholder="Insira a sua senha" />
                 <Input label="Confirme a senha *" placeholder="Insira a sua senha" />
             </View>
-        </View>
+        </ScrollView>
     );
 }
